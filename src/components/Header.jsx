@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 export default function Header() {
   return (
-    <Navbar bg="dark" variant="dark">
+    <Navbar sticky="top" bg="dark" variant="dark">
       <Container fluid>
         <Navbar.Brand href="#home">Navbar</Navbar.Brand>
         <Nav className="me-auto">
