@@ -1,5 +1,6 @@
 :root {
     --main-nav-height: 10px;
+    --primary-color: #f03252;
 }
 
 .fh-row {
@@ -16,6 +17,100 @@
     flex-grow: 1;
 }
 
-.intro-text h2{
-    font-size: 5.5rem;
+.intro-text {
+    margin-bottom: 20%;
+}
+.intro-text h3 {
+    font-size: 4rem;
+}
+.intro-text h3:hover {
+    cursor: pointer;
+}
+.intro-text h2 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 0.85;
+}
+
+.intro-text>h2>span{
+    display: inline-block;
+    transform-origin: bottom left;
+}
+
+.intro-text>h2>span:hover {
+    cursor: pointer;
+}
+
+@keyframes horizontalStrech {
+    50% {
+        -moz-transform: scale(3, 1);
+        -webkit-transform: scale(3, 1);
+        -o-transform: scale(3, 1);
+        -ms-transform: scale(3, 1);
+        transform: scale(3, 1);
+        color : var(--primary-color);
+    }
+}
+
+@keyframes bouncer {
+    50% {
+        -moz-transform: scale(1.5, 1.5);
+        -webkit-transform: scale(1.5, 1.5);
+        -o-transform: scale(1.5, 1.5);
+        -ms-transform: scale(1.5, 1.5);
+        transform: scale(1.5, 1.5);
+        color: var(--primary-color);
+    }
+}
+
+.elastic-animate {
+    animation: bouncer 0.55s ease-in-out;
+}
+
+.horizontal-flip-animate {
+    animation: horizontalStrech 0.75s ease-in-out;
+}
+
+@keyframes rotate180 {
+    50% {
+        transform: rotate(180deg);
+        color : var(--primary-color);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+.rotate-180 {
+    animation: rotate180 0.75s ease-in-out;
+}
+
+@keyframes rotateNegative180 {
+    50% {
+        transform: rotate(-180deg);
+        color : var(--primary-color);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+.rotate-180-negative {    
+    animation: rotateNegative180 0.75s ease-in-out;
+}
+
+
+@keyframes skew {
+    50% {
+        transform: skew(35deg, 20deg);        
+        color : var(--primary-color);
+    }
+
+    100% {
+        transform: skew(0deg, 0deg);
+    }
+}
+
+.skew-animate {    
+    animation: skew 0.75s ease-in-out;
 }
